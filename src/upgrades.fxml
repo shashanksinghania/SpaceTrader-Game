@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-image: url(&quot;playerMenuBackground.jpg&quot;); -fx-background-size: cover; -fx-background-repeat: no-repeat; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UpgradesController">
+    <children>
+        <Button fx:id="backButton" layoutX="20" layoutY="14" minHeight="30.0" minWidth="100.0" onAction="#back" text="Back">
+            <font><Font name="Century Gothic" size="12.0" /></font>
+        </Button>
+        <Label fx:id="skillLabel" layoutX="25" layoutY="60" text="Name and Skill Points" textFill="white">
+            <font><Font name="Century Gothic" size="12.0" /></font>
+        </Label>
+        <Label layoutX="25" layoutY="90" text="Equipped Items" textFill="white">
+            <font><Font name="Century Gothic" size="16.0" /></font>
+        </Label>
+        <ListView fx:id="list" layoutX="25" layoutY="125" prefHeight="233.0" prefWidth="750">
+        </ListView>
+      <ImageView fx:id="equipImage" fitHeight="161.0" fitWidth="320.0" layoutX="316.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</AnchorPane>

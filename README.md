@@ -1,1 +1,1 @@
-# SpaceTrader-Game
+# Space Trader Game

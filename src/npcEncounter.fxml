@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-image: url(&quot;playerMenuBackground.jpg&quot;); -fx-background-size: cover; -fx-background-repeat: no-repeat; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NpcController">
+    <VBox alignment="CENTER" prefHeight="200" prefWidth="400" spacing="15" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <Label fx:id="encounterTypeInfo" layoutX="150" textAlignment="CENTER" textFill="white">
+            <font>
+            <Font name="Century Gothic" size="40.0" />
+            </font>
+            <padding>
+               <Insets top="20.0" />
+            </padding>
+            </Label>
+            <HBox fx:id="display" alignment="CENTER" layoutX="15" />
+            <HBox fx:id="buttons" alignment="CENTER" layoutX="15" spacing="20">
+                <Button fx:id="left" onAction="#leftButtonClicked" text="Left" textAlignment="CENTER">
+                    <font>
+                        <Font name="Century Gothic" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="middle" onAction="#middleButtonClicked" text="Middle" textAlignment="CENTER">
+                    <font>
+                        <Font name="Century Gothic" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="right" onAction="#rightButtonClicked" text="Right">
+                <font>
+                    <Font name="Century Gothic" size="15.0" />
+                </font>
+                </Button>
+                <Button fx:id="extraB" onAction="#extraButtonClicked" text="Extra" textAlignment="CENTER">
+                    <font>
+                        <Font name="Century Gothic" size="15.0" />
+                    </font>
+            </Button>
+            </HBox>
+            <Label fx:id="information" layoutX="300" textAlignment="CENTER" textFill="white">
+                <font>
+                    <Font name="Century Gothic" size="15.0" />
+                </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+            </Label>
+            <Button fx:id="done" layoutX="150" onAction="#done" text="Done" textAlignment="CENTER" visible="false">
+            <font>
+                <Font name="Century Gothic" size="15.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="30.0" />
+            </VBox.margin>
+            </Button>
+        </children>
+    </VBox>
+
+</AnchorPane>

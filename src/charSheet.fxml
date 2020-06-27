@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-image: url(&quot;playerMenuBackground.jpg&quot;); -fx-background-size: cover; -fx-background-repeat: no-repeat; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CharSheetController">
+         <children>
+            <Text fx:id="name" text="Text" />
+             <Text fx:id="skillPoints" />
+             <Text fx:id="allocations" />
+             <Text fx:id="credits" />
+             <Text fx:id="difficulty" />
+             <Button fx:id="btnCont" onAction="#goToNextScene" text="Continue" textFill="red" textAlignment="CENTER">
+                 <font>
+                    <Font name="Berlin Sans FB Bold" size="20.0" />
+                 </font>
+             </Button>
+         </children>
+</VBox>

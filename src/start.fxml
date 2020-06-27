@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane prefHeight="482.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartController">
+   <children>
+      <Pane prefHeight="293.0" prefWidth="482.0">
+         <children>
+            <ImageView fitHeight="508.0" fitWidth="646.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="images/startScreenBackground.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="btn_msg" layoutX="57.0" layoutY="369.0" mnemonicParsing="false" onAction="#pressBtn" text="START" textAlignment="CENTER" textFill="#151515">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="35.0" />
+               </font>
+            </Button>
+            <Label layoutX="386.0" layoutY="68.0" text="SPACE" textFill="#f5dc00">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="60.0" />
+               </font>
+            </Label>
+            <Label layoutX="361.0" layoutY="129.0" text="TRADERS" textFill="#f5dc00">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="60.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

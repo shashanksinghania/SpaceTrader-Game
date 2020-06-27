@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(&quot;playerMenuBackground.jpg&quot;); -fx-background-size: cover; -fx-background-repeat: no-repeat; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameOverController">
+    <children>
+        <BorderPane layoutX="147.0" layoutY="64.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button id="okBtn" mnemonicParsing="false" onAction="#endGame" text="OK" textFill="RED">
+                            <font>
+                                <Font name="Berlin Sans FB Bold" size="30.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </center>
+            <top>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label fx:id="gameOver" text="Game Over!">
+                            <font>
+                                <Font name="Georgia Bold" size="65.0" />
+                            </font>
+                            <textFill>
+                                <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color red="0.7647058963775635" green="0.7647058963775635" blue="0.7647058963775635" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="0.9647058844566345" green="1.0" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </RadialGradient>
+                            </textFill>
+                            <VBox.margin>
+                                <Insets bottom="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label fx:id="details" text="Your Ship Was Damaged Beyond Repair">
+                            <font>
+                                <Font name="Georgia Bold" size="28.0" />
+                            </font>
+                            <textFill>
+                                <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color red="0.7647058963775635" green="0.7647058963775635" blue="0.7647058963775635" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="0.9647058844566345" green="1.0" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </RadialGradient>
+                            </textFill>
+                            <padding>
+                                <Insets top="20.0" />
+                            </padding>
+                        </Label>
+                    </children>
+                </VBox>
+            </top>
+        </BorderPane>
+    </children>
+</AnchorPane>

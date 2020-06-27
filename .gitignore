@@ -1,0 +1,11 @@
+.idea/
+*.iml
+README.md
+out/
+/bin/
+.classpath
+.project
+.settings
+checkstyle-*.jar
+cs2340_checks.xml
+run_checkstyle.py

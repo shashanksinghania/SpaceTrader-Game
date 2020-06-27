@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0"
+    style="-fx-background-image: url(&quot;playerMenuBackground.jpg&quot;);       -fx-background-size: cover; -fx-background-repeat: no-repeat;       -fx-background-position: center center;"
+    xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="EndCreditsController">
+    <children>
+        <Text fx:id="title" textAlignment="CENTER" />
+        <Text fx:id="credits" textAlignment="CENTER" />
+        <Button fx:id="btnStartNewGame" onAction="#goToStartScreen" text="Start New Game" textAlignment="CENTER"
+            textFill="red">
+            <font>
+                <Font name="Berlin Sans FB Bold" size="30.0" />
+            </font>
+        </Button>
+    </children>
+</VBox>

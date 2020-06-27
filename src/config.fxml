@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-image: url(&quot;playerMenuBackground.jpg&quot;); -fx-background-size: cover; -fx-background-repeat: no-repeat; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ConfigController">
+    <top>
+        <Label fx:id="mainHeadLabel" text="NEW COMMANDER" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="Georgia Bold" size="45.0" />
+            </font>
+            <textFill>
+                <RadialGradient centerX="0.5" centerY="0.5533333188011533" radius="0.5">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.7657894492149353" green="0.7657894492149353" blue="0.7657894492149353" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9666666388511658" green="1.0"/>
+                            </color>
+                        </Stop>
+                    </stops>
+                </RadialGradient>
+            </textFill>
+        </Label>
+    </top>
+    <bottom>
+        <Button fx:id="okBtn" mnemonicParsing="false" onAction="#goToCharScreen" text="OK" textFill="#d62626" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="Berlin Sans FB Bold" size="20.0" />
+            </font>
+            <BorderPane.margin>
+                <Insets bottom="20.0" top="20.0" />
+            </BorderPane.margin>
+        </Button>
+    </bottom>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="nameLabel" alignment="CENTER" text="Name:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="nameTextField" promptText="Enter Your Name">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="difficultyLevel" alignment="CENTER" text="Difficulty:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <ComboBox fx:id="difficultyMenu" onAction="#changeDifficulty" promptText="Select " visibleRowCount="3" style="-fx-font-family: Verdana; -fx-font-size: 15px">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Easy" />
+                                    <String fx:value="Normal" />
+                                    <String fx:value="Hard" />
+                                </FXCollections>
+                            </items>
+
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </ComboBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="skillLabel" alignment="CENTER" text="Skill Points:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <Label fx:id="skillPointsLabel" text="0" textFill="WHITE">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="pointsLabel" alignment="CENTER" text="Pilot:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <Button fx:id="pilotPlusBtn" disable="true" mnemonicParsing="false" onAction="#pilotPlus" text="+" textAlignment="CENTER">
+                            <font>
+                                <Font name="Berlin Sans FB Bold" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Label fx:id="pilotPtsLabel" text="0" textFill="WHITE">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Button fx:id="pilotMinusBtn" disable="true" mnemonicParsing="false" onAction="#pilotMinus" text="-" textAlignment="CENTER">
+                            <font>
+                                <Font name="Berlin Sans FB Bold" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox fx:id="fighterPlsBtn" alignment="CENTER" layoutX="10.0" layoutY="267.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="fighterLabel" alignment="CENTER" text="Fighter:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <Button fx:id="fighterPlusBtn" disable="true" mnemonicParsing="false" onAction="#fighterPlus" text="+" textAlignment="CENTER">
+                            <font>
+                                <Font name="Berlin Sans FB Bold" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Label fx:id="fighterPtsLabel" text="0" textFill="WHITE">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Button fx:id="fighterMinusBtn" disable="true" mnemonicParsing="false" onAction="#fighterMinus" text="-" textAlignment="CENTER">
+                            <font>
+                                <Font name="Berlin Sans FB Bold" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="284.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="traderLabel" alignment="CENTER" text="Trader:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <Button fx:id="traderPlusBtn" disable="true" mnemonicParsing="false" onAction="#traderPlus" text="+" textAlignment="CENTER">
+                            <font>
+                                <Font name="Berlin Sans FB Bold" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Label fx:id="traderPtsLabel" text="0" textFill="WHITE">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Button fx:id="traderMinusBtn" disable="true" mnemonicParsing="false" onAction="#traderMinus" text="-" textAlignment="CENTER">
+                            <font>
+                                <Font name="Berlin Sans FB Bold" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="296.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="engineerLabel" alignment="CENTER" text="Engineer:" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <Button fx:id="engineerPlusBtn" disable="true" mnemonicParsing="false" onAction="#engineerPlus" text="+" textAlignment="CENTER">
+                            <font>
+                                <Font name="Berlin Sans FB Bold" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Label fx:id="engineerPtsLabel" text="0" textFill="WHITE">
+                            <font>
+                                <Font name="Berlin Sans FB" size="20.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Button fx:id="engineerMinusBtn" disable="true" mnemonicParsing="false" onAction="#engineerMinus" text="-" textAlignment="CENTER">
+                            <font>
+                                <Font name="Berlin Sans FB Bold" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(&quot;startScreenBackground.jpg&quot;); -fx-background-size: cover; -fx-background-repeat: no-repeat; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartController">
+   <children>
+      <HBox alignment="BOTTOM_LEFT" layoutX="15.0" layoutY="281.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="385.0" AnchorPane.topAnchor="281.0">
+         <children>
+            <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#pressBtn" text="START" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
